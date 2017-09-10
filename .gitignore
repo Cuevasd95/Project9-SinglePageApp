@@ -1,0 +1,7 @@
+node_modules
+categories.db
+foodItems.db
+recipes.db
+package-loc.json
+.DS_Store
+vendor/

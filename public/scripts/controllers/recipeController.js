@@ -20,8 +20,11 @@
 
         //delete selected recipe from database and from $scope.recipe array
 		$scope.delete = function(recipe_id, index) {
-            dataService.deleteRecipe(recipe_id);
-            $scope.recipes.splice(index, 1);
+            var warningDelete = confirm('Are you sure you want to delete this recipe?');
+            if(warningDelete == true) {
+              dataService.deleteRecipe(recipe_id);
+              $scope.recipes.splice(index, 1);
+            }
         }
 
 
